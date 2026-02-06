@@ -5,23 +5,38 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csproject2.DashboardController">
     <children>
-        <VBox prefWidth="200.0" styleClass="left-form" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox prefWidth="200.0" style="-fx-background-color: #2c3e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <Label text="ADMIN PANEL" textFill="WHITE" translateY="20.0" translateX="40.0">
                     <font><Font name="System Bold" size="18.0" /></font>
                 </Label>
+
+                <VBox spacing="10.0" translateY="60.0" translateX="10.0" prefWidth="180.0">
+                    <children>
+                        <TextField fx:id="addName" promptText="Medicine Name" />
+                        <TextField fx:id="addStock" promptText="Stock" />
+                        <TextField fx:id="addPrice" promptText="Price" />
+                        <Button onAction="#addMedicine" prefWidth="180.0" text="ADD ITEM" style="-fx-background-color: #27ae60; -fx-text-fill: white;" />
+                        <Button onAction="#deleteMedicine" prefWidth="180.0" text="DELETE SELECTED" style="-fx-background-color: #c0392b; -fx-text-fill: white;" />
+                    </children>
+                </VBox>
             </children>
         </VBox>
-        <Label layoutX="220.0" layoutY="30.0" text="Pharmacy Inventory">
+
+        <Label layoutX="220.0" layoutY="30.0" text="Pharmacy Inventory Management">
             <font><Font name="System Bold" size="24.0" /></font>
         </Label>
+
+        <TextField fx:id="searchField" layoutX="220.0" layoutY="65.0" prefWidth="650.0"
+                   promptText="Search by medicine name..."
+                   style="-fx-background-radius: 15; -fx-padding: 5;"/>
 
         <TableView fx:id="medicineTable" layoutX="220.0" layoutY="100.0" prefHeight="450.0" prefWidth="650.0">
             <columns>
                 <TableColumn fx:id="col_id" text="ID" prefWidth="50" />
-                <TableColumn fx:id="col_name" text="Medicine Name" prefWidth="300" />
-                <TableColumn fx:id="col_stock" text="Stock" prefWidth="150" />
-                <TableColumn fx:id="col_price" text="Price" prefWidth="150" />
+                <TableColumn fx:id="col_name" text="Medicine Name" prefWidth="250" />
+                <TableColumn fx:id="col_stock" text="Stock" prefWidth="175" />
+                <TableColumn fx:id="col_price" text="Price ($)" prefWidth="175" />
             </columns>
         </TableView>
     </children>
