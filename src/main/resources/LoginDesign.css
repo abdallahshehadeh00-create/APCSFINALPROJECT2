@@ -1,3 +1,35 @@
 .left-form {
     -fx-background-color: linear-gradient(to bottom right, #43ad7d, #864281);
 }
+
+.right-form {
+    -fx-background-color: #fff;
+}
+
+.textfield {
+    -fx-background-color: transparent;
+    -fx-border-color: #000;
+    -fx-border-width: 0.4px;
+    -fx-border-radius: 4px;
+}
+
+.login-btn {
+    -fx-background-color: linear-gradient(to bottom right, #43ad7d, #864281);
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-background-radius: 10px;
+}
+
+.close:hover {
+    -fx-background-color: #ff4d5f;
+    -fx-text-fill: white;
+}
+
+/* Dashboard Table Styling */
+.table-view {
+    -fx-border-color: #43ad7d;
+}
+.table-view .column-header {
+    -fx-background-color: #43ad7d;
+    -fx-text-fill: white;
+}

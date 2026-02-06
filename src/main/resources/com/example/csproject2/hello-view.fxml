@@ -1,45 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane prefHeight="492.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csproject2.HelloController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../LoginDesign.css">
+      <AnchorPane prefHeight="492.0" prefWidth="700.0">
          <children>
-            <AnchorPane styleClass="left-form" prefHeight="492.0" prefWidth="250.0">
+            <AnchorPane prefHeight="492.0" prefWidth="250.0" styleClass="left-form">
                <children>
-                  <Label layoutX="39.0" layoutY="164.0" prefHeight="25.0" prefWidth="175.0" text="Pharmacy managment System">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
+                  <ImageView fitHeight="130.0" fitWidth="175.0" layoutX="61.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@IMAGES/stethoscope-icon-black-white-color-with-line-style-vector.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="180.0" prefHeight="25.0" prefWidth="222.0" text="Pharmacy Management System" textFill="WHITE">
+                     <font><Font name="System Bold" size="14.0" /></font>
                   </Label>
-               </children></AnchorPane>
-            <AnchorPane layoutX="250.0" prefHeight="492.0" prefWidth="450.0">
-               <children>
-                  <Label layoutX="141.0" layoutY="108.0" text="Welcome, Admin!">
-                     <font>
-                        <Font name="SansSerif Bold" size="25.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="172.0" layoutY="194.0" promptText="Username" />
-                  <PasswordField layoutX="172.0" layoutY="234.0" promptText="Password" />
-                  <Button layoutX="220.0" layoutY="271.0" mnemonicParsing="false" text="Login" />
-                  <Button layoutX="412.0" layoutY="14.0" mnemonicParsing="false" text="X" />
                </children>
             </AnchorPane>
-            <ImageView fitHeight="110.0" fitWidth="149.0" layoutX="429.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../java/IMAGES/doctor-icon-linear-logo-mark-in-black-and-white-vector.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="130.0" fitWidth="175.0" layoutX="61.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../java/IMAGES/stethoscope-icon-black-white-color-with-line-style-vector.jpg" />
-               </image>
-            </ImageView>
+
+            <AnchorPane layoutX="250.0" prefHeight="492.0" prefWidth="450.0" styleClass="right-form">
+               <children>
+                  <ImageView fitHeight="110.0" fitWidth="149.0" layoutX="171.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@IMAGES/doctor-icon-linear-logo-mark-in-black-and-white-vector.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="123.0" layoutY="135.0" text="Welcome, Admin!">
+                     <font><Font name="SansSerif Bold" size="25.0" /></font>
+                  </Label>
+                  <TextField fx:id="usernameField" layoutX="151.0" layoutY="200.0" prefHeight="30.0" prefWidth="150.0" promptText="Username" styleClass="textfield" />
+                  <PasswordField fx:id="passwordField" layoutX="151.0" layoutY="245.0" prefHeight="30.0" prefWidth="150.0" promptText="Password" styleClass="textfield" />
+                  <Button layoutX="151.0" layoutY="300.0" onAction="#handleLogin" prefHeight="35.0" prefWidth="150.0" styleClass="login-btn" text="Login" />
+                  <Button fx:id="closeButton" layoutX="410.0" layoutY="10.0" onAction="#handleClose" styleClass="close" text="X" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
