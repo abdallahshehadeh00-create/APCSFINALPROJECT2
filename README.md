@@ -1,4 +1,6 @@
-# Pharmacy Management System (CS Project 2)
+# Pharmacy Management System (CS Project)
+**GitHub Repository:** https://github.com/abdallahshehadeh00-create/APCSFINALPROJECT2
+# Pharmacy Management System (CS Project)
 
 A robust JavaFX application for managing pharmacy inventory with real-time search and JSON-based data persistence.
 
