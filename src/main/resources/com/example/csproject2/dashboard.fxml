@@ -3,7 +3,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csproject2.DashboardController">
     <children>
         <VBox prefWidth="200.0" styleClass="left-form" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -12,15 +12,16 @@
                 </Label>
             </children>
         </VBox>
-        <Label layoutX="220.0" layoutY="30.0" text="Pharmacy Inventory Management System">
+        <Label layoutX="220.0" layoutY="30.0" text="Pharmacy Inventory">
             <font><Font name="System Bold" size="24.0" /></font>
         </Label>
-        <TableView layoutX="220.0" layoutY="100.0" prefHeight="450.0" prefWidth="650.0">
+
+        <TableView fx:id="medicineTable" layoutX="220.0" layoutY="100.0" prefHeight="450.0" prefWidth="650.0">
             <columns>
-                <TableColumn text="ID" prefWidth="50" />
-                <TableColumn text="Medicine Name" prefWidth="300" />
-                <TableColumn text="Stock" prefWidth="150" />
-                <TableColumn text="Price" prefWidth="150" />
+                <TableColumn fx:id="col_id" text="ID" prefWidth="50" />
+                <TableColumn fx:id="col_name" text="Medicine Name" prefWidth="300" />
+                <TableColumn fx:id="col_stock" text="Stock" prefWidth="150" />
+                <TableColumn fx:id="col_price" text="Price" prefWidth="150" />
             </columns>
         </TableView>
     </children>
