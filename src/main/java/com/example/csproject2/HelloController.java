@@ -20,17 +20,17 @@ public class HelloController {
 
         if (user.equals("admin") && pass.equals("admin123")) {
             try {
-                // Hide Login Window
+
                 Stage stage = (Stage) usernameField.getScene().getWindow();
                 stage.close();
 
-                // Open Dashboard Window
+
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
                 Parent root = loader.load();
                 Stage dashboardStage = new Stage();
                 Scene scene = new Scene(root);
 
-                // Attach the CSS
+
                 scene.getStylesheets().add(getClass().getResource("/LoginDesign.css").toExternalForm());
 
                 dashboardStage.setTitle("Pharmacy System - Dashboard");

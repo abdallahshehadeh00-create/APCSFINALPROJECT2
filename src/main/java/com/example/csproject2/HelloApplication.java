@@ -12,7 +12,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        // Load CSS from the root of resources
+
         if (getClass().getResource("/LoginDesign.css") != null) {
             scene.getStylesheets().add(getClass().getResource("/LoginDesign.css").toExternalForm());
         }

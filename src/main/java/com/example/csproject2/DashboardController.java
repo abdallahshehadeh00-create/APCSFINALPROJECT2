@@ -23,16 +23,16 @@ public class DashboardController {
     private ObservableList<Medicine> medicineList = FXCollections.observableArrayList();
 
     public void initialize() {
-        // Map Table Columns
+
         col_id.setCellValueFactory(data -> data.getValue().idProperty().asObject());
         col_name.setCellValueFactory(data -> data.getValue().nameProperty());
         col_stock.setCellValueFactory(data -> data.getValue().stockProperty().asObject());
         col_price.setCellValueFactory(data -> data.getValue().priceProperty().asObject());
 
-        // Load data from JSON
+
         medicineList.addAll(JsonHandler.loadItems());
 
-        // Setup Filtering (Excellent Pass: Efficient Algorithms)
+
         FilteredList<Medicine> filteredData = new FilteredList<>(medicineList, p -> true);
 
         if (searchField != null) {
@@ -64,7 +64,7 @@ public class DashboardController {
             Medicine newMed = new Medicine(id, name, stock, price);
             medicineList.add(newMed);
 
-            // Save to JSON
+
             JsonHandler.saveItems(new ArrayList<>(medicineList));
 
             addName.clear(); addStock.clear(); addPrice.clear();

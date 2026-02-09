@@ -25,7 +25,7 @@ public class JsonHandler {
         try (Reader reader = new FileReader(FILE_PATH)) {
             List<Medicine> loaded = gson.fromJson(reader, new TypeToken<List<Medicine>>(){}.getType());
             if (loaded != null) {
-                // IMPORTANT: Initialize properties for JavaFX after loading
+
                 for (Medicine m : loaded) {
                     m.initializeProperties();
                 }
