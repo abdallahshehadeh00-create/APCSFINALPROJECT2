@@ -31,5 +31,6 @@ Features
  Transient Properties: Utilized the transient keyword in the Medicine model to prevent serialization errors with JavaFX Property objects while maintaining UI binding.
  MVC Pattern: Strictly separated the GUI (FXML) from the Business Logic (Controller) to ensure code maintainability.
 
-  [IEEE REPORT 2.pdf](https://github.com/user-attachments/files/25200483/IEEE.REPORT.2.pdf)
+[Uploading PMIS IEEE REPORT.pdf…]()
+
 
